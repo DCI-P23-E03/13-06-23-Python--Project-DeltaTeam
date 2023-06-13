@@ -2,8 +2,8 @@ print("Enter: 1 for current time")
 print("Enter: 2 for current time in UNIX timestamp")
 print("Enter: 3 to convert date into datetime datatype")
 print("Enter: 4 for time until next leap year")
-print("Enter: 5 to dispaly a date in seconds, days, or years")
-print("Enter: 6 for calendar of current month")
+print("Enter: 5 for time difference in seconds, days, or years")
+print("Enter: 6 for calendar of selected month")
 print("Enter: 7 for multiple timezones")
 print("Enter: 8 for time in the opposite end of the world")
 print("Enter: 9 for a joke")
@@ -17,10 +17,31 @@ elif menu == "3":
     print("\n")
 elif menu == "4":
     print("\n")
+
 elif menu == "5":
-    print("\n")
+    from datetime import datetime
+    date1 = input("Give first date(YYYY/MM/DD HH:MM:SS): ")
+    date2 = input("Give second date(YYYY/MM/DD HH:MM:SS): ")
+    result = input("Do you want the time difference in seconds, days or years(s/d/y): ")
+    d1 = datetime.strptime(date1, "%Y/%m/%d %H:%M:%S")
+    d2 = datetime.strptime(date2, "%Y/%m/%d %H:%M:%S")
+    delta = d2 - d1
+    if result == "s":
+        print(f"Time difference is {delta.total_seconds()} seconds")
+    elif result == "d":
+        print(f"Time difference is {delta.days} days")
+    elif result == "y":
+        years = d2.year -d1.year
+        print(f"Time difference is {years} years")
+    else:
+        print(f"I don't understand {result}, program closes.")
+
 elif menu == "6":
-    print("\n")
+    import calendar
+    year = int(input("Which year's calendar do you want(YYYY): "))
+    month = int(input("Which month's calender do you want(MM): "))
+    print(calendar.month(year, month))
+
 elif menu == "7":
     from datetime import datetime
     import pytz
@@ -57,12 +78,14 @@ elif menu == "7":
         print(f"Current time in Johannesburg is: {johannes_time}")
     else:
         print(f"{city} is very wrong, get lost!")
+
 elif menu == "8":
     from datetime import datetime, timedelta
     current = datetime.now()  
     opposite = current + timedelta(hours=12)
     print("Your current time is:", current.strftime("%H:%M:%S"))
     print("Time on the opposite end of the world is:", opposite.strftime("%H:%M:%S"))
+
 elif menu == "9":
     import random
     jokes = [
@@ -84,6 +107,7 @@ elif menu == "9":
         ]
     joke = random.choice(jokes)
     print(joke)
+    
 elif menu == "0":
     from datetime import datetime
     gamescom = datetime(year=2023, month=8, day=23, hour=9)
