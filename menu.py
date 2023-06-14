@@ -1,7 +1,7 @@
 print("Enter: 1 for current time")
 print("Enter: 2 for current time in UNIX timestamp")
 print("Enter: 3 to convert date into datetime datatype")
-print("Enter: 4 for time until next leap year")
+print("Enter: 4 for days until next leap year")
 print("Enter: 5 for time difference in seconds, days, or years")
 print("Enter: 6 for calendar of selected month")
 print("Enter: 7 for multiple timezones")
@@ -9,14 +9,32 @@ print("Enter: 8 for time in the opposite end of the world")
 print("Enter: 9 for a joke")
 print("Enter: 0 for countdown to Gamescom Cologne 2023")
 menu = input("Your choice: ")
+
 if menu == "1":
-    print("\n")
+    import datetime
+    now = datetime.datetime.now()
+    print(f"Your current date and time are: {now}")
 elif menu == "2":
-    print("\n")
+    import time
+    unix = time.time()
+    print(f"Current time in Unix format is: {unix}")
 elif menu == "3":
-    print("\n")
+    from datetime import datetime
+    date = input("Enter a date(YYYY/MM/DD): ")
+    d = datetime.strptime(date, "%Y/%m/%d")
+    print(f"Your date: {date} converted into datetime datatype looks like this {d}.")
+
 elif menu == "4":
-    print("\n")
+    import datetime
+    year = datetime.date.today().year
+    while True:
+        year += 1
+        if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+            break
+    date = datetime.date.today()
+    leap_year = datetime.date(year, 2, 29)
+    count = leap_year - date
+    print(f"Days to wait until next leap year are: {count.days}.")
 
 elif menu == "5":
     from datetime import datetime
