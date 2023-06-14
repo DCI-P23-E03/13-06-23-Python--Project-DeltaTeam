@@ -7,10 +7,12 @@ import datetime, time, calendar
 import pytz
 import random
 from dateutil import relativedelta
+import os
 
 while True:
 # menu to take input from the user
-    print('''
+    
+    print(''' Choose the option:
         0 - Current Time 
         1 - Current Unix Timestamp
         2 - Convert String into Datetime
@@ -22,29 +24,34 @@ while True:
         8 - Joke
         9 - Surprise
         ''')
-
+       
     choice = int(input("Enter your choice from menu: "))
-
+    os.system('clear') 
     if choice == 0:
             print(f"\nCurrent Time: ",datetime.datetime.now().time().strftime("%H:%M:%S"))
+            
     elif choice == 1:
             print(f"\nCurrent Unix Time(since 1, Jan): ", time.time())
+    
     elif choice == 2:
             #string = "2023-06-13 15:17:05"
             string1 = input("Enter datetime in formate (YYYY-MM-DD HH:MM:SS): ")
             print(f"String to Datetime formate: ", datetime.datetime.strptime(string1,"%Y-%m-%d %H:%M:%S"))
+    
     elif choice == 3:
-            year = datetime.date.today().year
-            while True:
-                year += 1
-                if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
-                    break
+            current_year = datetime.datetime.now().year
+            if calendar.isleap(current_year):
+                print(f"{current_year} is a leap year.\n")
+            else:
+                print(f"{current_year} is not a leap year.\n")
 
-            date = datetime.date.today()
-            leap_year = datetime.date(year, 2, 29)
-            count = leap_year - date
-            print(f"\nDays to wait until next leap year are: {count.days}.")
-            
+            next_leap_year = current_year
+            while not calendar.isleap(next_leap_year):
+                next_leap_year += 1
+    
+            time_remaining = datetime.datetime(next_leap_year, 1, 1) - datetime.datetime.now()
+            print(f"Time remaining until the next leap year: {time_remaining.days} days.\n")
+                   
     elif choice == 4:
             
             # input 2 dates from user
@@ -62,7 +69,7 @@ while True:
                 print("\nTime difference in Seconds :", delta.total_seconds,"seconds")
             elif time_output == "YEAR":
                 year = date2.year - date1.year
-                print("Thime differnec in Years :", year, "year")    
+                print("Thime differnce in Years :", year, "year")    
             else:
                 print("Invalid!, choose wisely.")
 
@@ -75,6 +82,7 @@ while True:
             cal_output = calendar.month(cal_year,cal_month)
             highlight_today = cal_output.replace(str(cal_today),color_today)
             print(highlight_today)    
+
     elif choice == 6:
             print('''
             T - Tokyo/Japan
@@ -114,11 +122,14 @@ while True:
                 print("\nThe current time in Johannesburg is: ",currtime_in_johann)
             else:
                 print("Invalid!, Choose wisely....")
+
     elif choice == 7:
             current_time = datetime.datetime.now()
             other_side_of_world = current_time + datetime.timedelta(hours=12)
             print("Your current time is: ", current_time.strftime("%H:%M:%S"))  
             print("The current time other side of world is: ",other_side_of_world.strftime("%H:%M:%S"))
+            print("The difference is ", other_side_of_world-current_time)
+
     elif choice == 8:
             print("Here comes, your random jokes.......: \n")
             joke = [
