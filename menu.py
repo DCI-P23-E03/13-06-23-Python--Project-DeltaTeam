@@ -70,7 +70,7 @@ elif choice == 5:
         # Enter the month and year
         cal_year = int(input("\nEnter year: "))
         cal_month = int(input("\nEnter month:"))
-        cal_today = datetime.now().day
+        cal_today = datetime.datetime.now().day
         color_today = '\033[92m'+ str(cal_today) +'\033[0m'
         cal_output = calendar.month(cal_year,cal_month)
         highlight_today = cal_output.replace(str(cal_today),color_today)

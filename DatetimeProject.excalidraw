@@ -1,0 +1,199 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "lYzJnHA8qrxh6jl6lGLAw",
+      "type": "rectangle",
+      "x": 860,
+      "y": 231,
+      "width": 478,
+      "height": 297,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 389412277,
+      "version": 247,
+      "versionNonce": 235673243,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1686734707371,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "6ahJ1fPXOArROf2oauX6J",
+      "type": "text",
+      "x": 834,
+      "y": 251,
+      "width": 498.35943603515625,
+      "height": 250,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 771426485,
+      "version": 3,
+      "versionNonce": 1917009851,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "eUk7uYrtm3c3xZi_EPPW9",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1686734759846,
+      "link": null,
+      "locked": false,
+      "text": "   0 - Current Time \n    1 - Current Unix Timestamp\n    2 - Convert String into Datetime\n    3 - Leap Year and time untill Next Leap year\n    4 - Specific unit(seconds, days, years)\n    5 - Current month Calendar\n    6 - Timezone\n    7 - Current time at the opposite end of world\n    8 - Joke\n    9 - Surprise",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 243,
+      "containerId": null,
+      "originalText": "   0 - Current Time \n    1 - Current Unix Timestamp\n    2 - Convert String into Datetime\n    3 - Leap Year and time untill Next Leap year\n    4 - Specific unit(seconds, days, years)\n    5 - Current month Calendar\n    6 - Timezone\n    7 - Current time at the opposite end of world\n    8 - Joke\n    9 - Surprise",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "eUk7uYrtm3c3xZi_EPPW9",
+      "type": "arrow",
+      "x": 1345,
+      "y": 278.8395604436986,
+      "width": 62,
+      "height": 2.1234115025387155,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1998883643,
+      "version": 153,
+      "versionNonce": 2125692085,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1686734860794,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          62,
+          -2.1234115025387155
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "6ahJ1fPXOArROf2oauX6J",
+        "gap": 12.64056396484375,
+        "focus": -0.6590777697542785
+      },
+      "endBinding": {
+        "elementId": "QGMN0crt7sMrlFz9XFjkw",
+        "gap": 11,
+        "focus": 0.030839002267573693
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "QGMN0crt7sMrlFz9XFjkw",
+      "type": "rectangle",
+      "x": 1418,
+      "y": 235,
+      "width": 739.0000000000001,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 912125301,
+      "version": 135,
+      "versionNonce": 2024419157,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "eUk7uYrtm3c3xZi_EPPW9",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1686734860760,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "VOBCmlaXRc-QJiUqLMmiy",
+      "type": "text",
+      "x": 1427,
+      "y": 251,
+      "width": 660.779296875,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1367857685,
+      "version": 53,
+      "versionNonce": 636592533,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1686734880098,
+      "link": null,
+      "locked": false,
+      "text": "Current Time : datetime.datetime.now().time().strftime(\"%H:%M:%S\")",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Current Time : datetime.datetime.now().time().strftime(\"%H:%M:%S\")",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
